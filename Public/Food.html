@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="CSS/Style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        #head{
+            font-weight: 800;
+            text-align: center;
+            Color:White;
+        }
+        body
+        {
+            font-family: sans-serif;
+        }
+
+        /* BORDERS */
+
+        table, td, th
+        {
+            border-bottom: 1px solid black;
+        }
+
+        table
+        {
+            border-collapse: collapse;
+            width: 98%
+        }
+
+        /* SIZING */
+
+        th
+        {
+            height: 40px;
+        }
+
+
+
+        /* ALIGNMENT & SPACING */
+
+        td, th
+        {
+            padding: 5px;
+        }
+
+        .hleft
+        {
+            text-align: left;
+        }
+        .hcenter
+        {
+            text-align: center;
+        }
+
+        td
+        {
+            vertical-align: top;
+        }
+
+        /* HEADER and FOOTER */
+
+        thead
+        {
+            background-color: lightblue;
+            color: white;
+        }
+
+
+        /* PSEUDO CLASSES */
+
+        tr:nth-child(even)
+        {
+            background-color: orange;
+        }
+
+        tbody>tr:hover
+        {
+            background-color: purple;
+            color: white;
+        }
+
+        caption
+        {
+            text-align: left;
+            font-size: x-small;
+            padding: 3px;
+            caption-side: bottom;
+        }
+        }
+    </style>
+
+<!--Header-->
+    <body>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <a href="index.html"><img src="images/Leo.jpg" width=128
+    alt="Leo Metallic" /></a>
+    </div >
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+        <h1>Leo Metallic:<br/>Student, Lover of Indian Buffets, etc.</h1>
+    </div>
+    <br/>
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <nav id="nav" class="navbar navbar-default">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutMe.html" >About Me</a>
+                    </li>
+                    <li><a href="Food.html">Food</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+<!--End Header-->
+
+<!--Start Table-->
+<table>
+        <thead>
+            <tr id="head">
+                <th>Restaurant Name</th>
+                <th>Address</th>
+                <th>Money Spent</th>
+                <th>Food Consumed</th>
+                <th>Date Attended</th>
+
+            </tr>
+        </thead>
+        <tbody>
+             <tr>
+               <td>
+                 Taste of India
+               </td>
+               <td>
+                 316 E 4th St, Bloomington, IN 47408
+               </td>
+               <td>
+                 $9.00
+               </td>
+               <td>
+                 Pakora, Chana Masala, and Naan
+               </td>
+               <td>
+                 August 26, 2018
+               </td>
+             </tr>
+
+
+             <tr>
+               <td>
+                 Lucky Express
+               </td>
+               <td>
+                 307 E 3rd St, Bloomington, IN 47401
+               </td>
+               <td>
+                 $10.25
+               </td>
+               <td>
+                 Sesame Tofu with Brocoli
+               </td>
+               <td>
+                 August 20, 2018
+               </td>
+             </tr>
+
+
+             <tr>
+               <td>
+                 Trojan Horse
+               </td>
+               <td>
+                 100 E Kirkwood Ave, Bloomington, IN 47408
+               </td>
+               <td>
+                 Free
+               </td>
+               <td>
+                 Falafel and Hummus with Pita
+               </td>
+               <td>
+                 August 19th, 2018
+               </td>
+             </tr>
+
+
+             <tr>
+               <td>
+                 King Dough
+               </td>
+               <td>
+                 108 W 6th St, Bloomington, IN 47404
+               </td>
+               <td>
+                 $16.00
+               </td>
+               <td>
+                 Veggie Deluxe without Cheese
+               </td>
+               <td>
+                 August 14, 2018
+               </td>
+             </tr>
+             <tr>
+
+
+               <td>
+                 Owlery
+               </td>
+               <td>
+                 118 W 6th St, Bloomington, IN 47404
+               </td>
+               <td>
+                 $9.00
+               </td>
+               <td>
+                 Seitan Reuben Sandwich with Fries
+               </td>
+               <td>
+                 August 12, 2018
+               </td>
+             </tr>
+        </tbody>
+
+    </table>
+    <!--End Table-->
+    <div class="col-xs-12 col-sm-12 col-md-12 col lg-12">
+        <form action="" method="post">
+
+            <fieldset>
+                <legend>Update List</legend>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="input-group">
+                        <label class="input-group-addon input-sm">Restaurant Name: </label>
+                        <input class="form-control input-sm" type="text"  placeholder="Enter the restaurant name" required><br>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="input-group">
+                        <label class="input-group-addon input-sm">Address: </label>
+                        <input class="form-control input-sm" type="text" placeholder="Enter the restaurant's address" required><br>
+                    </div>
+    </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="input-group">
+                        <label class="input-group-addon input-sm">Money Spent: </label>
+                        <input class="form-control input-sm" type="text" placeholder="$0.00" required><br>
+                </div>
+              </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="input-group">
+                        <label class="input-group-addon input-sm">Food Consumed: </label>
+                        <input class="form-control input-sm" type="text" placeholder="The food that was eaten" required><br>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="input-group">
+                        <label class="input-group-addon input-sm">Date: </label>
+                        <input class="form-control input-sm" type="text" placeholder="Month Day, Year" required><br>
+                    </div>
+    </div>
+
+            </fieldset>
+
+        </form>
+        <a href="#"><button class="btn btn-lg btn-info" type="submit" name="submit" id="submit">Submit</button></a>
+
+    </div>
