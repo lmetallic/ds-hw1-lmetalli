@@ -10,8 +10,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <style>
-        #head{
-            font-weight: 800;
+        #head{font-weight: 800;
             text-align: center;
             Color:White;
         }
@@ -119,7 +118,7 @@
 <!--End Header-->
 
 <!--Start Table-->
-<table>
+<table id="Food">
         <thead>
             <tr id="head">
                 <th>Restaurant Name</th>
@@ -132,97 +131,47 @@
         </thead>
         <tbody>
              <tr>
-               <td>
-                 Taste of India
-               </td>
-               <td>
-                 316 E 4th St, Bloomington, IN 47408
-               </td>
-               <td>
-                 $9.00
-               </td>
-               <td>
-                 Pakora, Chana Masala, and Naan
-               </td>
-               <td>
-                 August 26, 2018
-               </td>
+               <td>Taste of India</td>
+               <td>316 E 4th St, Bloomington, IN 47408</td>
+               <td>$9.00</td>
+               <td>Pakora, Chana Masala, and Naan</td>
+               <td>August 26, 2018</td>
              </tr>
 
 
              <tr>
-               <td>
-                 Lucky Express
-               </td>
-               <td>
-                 307 E 3rd St, Bloomington, IN 47401
-               </td>
-               <td>
-                 $10.25
-               </td>
-               <td>
-                 Sesame Tofu with Brocoli
-               </td>
-               <td>
-                 August 20, 2018
-               </td>
+               <td>Lucky Express</td>
+               <td>307 E 3rd St, Bloomington, IN 47401</td>
+               <td>$10.25</td>
+               <td>Sesame Tofu with Brocoli</td>
+               <td>August 20, 2018</td>
              </tr>
 
 
              <tr>
-               <td>
-                 Trojan Horse
-               </td>
-               <td>
-                 100 E Kirkwood Ave, Bloomington, IN 47408
-               </td>
-               <td>
-                 Free
-               </td>
-               <td>
-                 Falafel and Hummus with Pita
-               </td>
-               <td>
-                 August 19th, 2018
-               </td>
+               <td>Trojan Horse</td>
+               <td>100 E Kirkwood Ave, Bloomington, IN 47408</td>
+               <td>$0.00</td>
+               <td>Falafel and Hummus with Pita</td>
+               <td>August 19th, 2018</td>
              </tr>
 
 
              <tr>
-               <td>
-                 King Dough
-               </td>
-               <td>
-                 108 W 6th St, Bloomington, IN 47404
-               </td>
-               <td>
-                 $16.00
-               </td>
-               <td>
-                 Veggie Deluxe without Cheese
-               </td>
-               <td>
-                 August 14, 2018
-               </td>
+               <td>King Dough</td>
+               <td>108 W 6th St, Bloomington, IN 47404</td>
+               <td>$16.00</td>
+               <td>Veggie Deluxe without Cheese</td>
+               <td>August 14, 2018</td>
              </tr>
              <tr>
 
 
-               <td>
-                 Owlery
-               </td>
-               <td>
-                 118 W 6th St, Bloomington, IN 47404
-               </td>
-               <td>
-                 $9.00
-               </td>
-               <td>
-                 Seitan Reuben Sandwich with Fries
-               </td>
-               <td>
-                 August 12, 2018
-               </td>
+               <td>Owlery</td>
+               <td>118 W 6th St, Bloomington, IN 47404</td>
+               <td>$9.00</td>
+               <td>Seitan Reuben Sandwich with Fries</td>
+               <td>August 12, 2018</td>
              </tr>
         </tbody>
 
@@ -230,10 +179,8 @@
     <!--End Table-->
     <div class="col-xs-12 col-sm-12 col-md-12 col lg-12">
         <form action="" method="post">
-
             <fieldset>
                 <legend>Update List</legend>
-
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="input-group">
                         <label class="input-group-addon input-sm">Restaurant Name: </label>
@@ -272,5 +219,8 @@
 
         </form>
         <a href="#"><button class="btn btn-lg btn-info" type="submit" name="submit" id="submit">Submit</button></a>
-
+        <script src="JS/tablesort.min.js"></script>
+        <script>
+          new Tablesort(document.getElementById('Food'));
+        </script>
     </div>
