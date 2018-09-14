@@ -1,86 +1,50 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-
-        <link rel="stylesheet" href="CSS/Style.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
-    <style>
-        #head{
-            font-weight: 800;
-            text-align: center;
-            Color:White;
-        }
-        body
-        {
-            font-family: sans-serif;
-        }
-
-        }
-        .list{
-            font-size:16px;
-            margin-bottom: 5px;
-        }
-    </style>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/Style.css">
+  <title>About Me</title>
+</head>
 
 <!--Header-->
-    <body>
-    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-        <a href="images/BigLeo.jpg"><img src="images/Leo.jpg" width=128
-    alt="Leo Metallic" /></a>
-    </div >
-    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-        <h1>Leo Metallic:<br/>Student, Lover of Indian Buffets, etc.</h1>
-    </div>
-    <br/>
-        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-            <nav id="nav" class="navbar navbar-default">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="AboutMe.html">About Me</a>
-                    </li>
-                    <li><a href="Food.html">Food</span></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-  <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-    <div class="header">
-      <h1>About Me</h1>
-    </div><!-- end header-->
-    <div class="intro column">
-      <h3>Introduction</h3>
-      <ul>
-        <li>Name: Leo Metallic</li>
-        <li>Hometown: Brownsburg, IN, USA</li>
-        <li>Birthday: August 30th</li>
-        <li>Age: 22</li>
-        <li>Email: <a href="mailto:lmetalli@iu.edu">lmetalli@iu.edu</a></li>
-    </div><!-- end intro-->
-    <div class="skills column">
-      <h3>My Skills</h3>
-      <ul>
-        <li>Cooking</li>
-        <li>Teamwork</li>
-        <li>Finding great deals on EBay</li>
-        <li>Analytical skills</li>
-      </ul><!--end skill-list-->
-    </div><!-- end skills-->
-    <div class="main-text">
-      <h3>More About Me</h3>
-      <p>
-        Ever since I was a young boy, I wanted to play in the NBA. Once I got cut from my 7th grade basketball team, I got real with myself and focused on academics. Now I have a college degree, which some NBA players don't have.
-      </p>
-    </div><!-- end main-text-->
-  </div><!--end container-->
+<body>
+<!--start of body-->
+    <div id="Bio" class="container-fluid">
+      <h1>{{person.name}}</h1>
+      <div class="header">
+        <img v-bind:src="person.img" alt="me" width="200px" />
+        <br />
+              <i>Source: RandomUser.me</i>
+        <br />
 
-  <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-    <a href="images/BigCouple.jpg"><img src="images/Couple.jpg" width=220
-alt="Shaz Assabuje and Leo Metallic" /></a>
-  </div>
-</body>
-<!--End Header-->
+        <b>Gender:</b> {{person.gender}}
+        <br />
+
+        <b>Origin:</b> {{person.origin}}
+        <br />
+
+        <b>Date of Birth:</b> {{prettyDate(person.dob)}}
+        <br />
+        <b>Age:</b> {{calculateAge(person.dob)}}
+        <br />
+
+        <b>Email:</b><a v-bind:href="'mailto:'+person.email"> {{person.email}}</a>
+        <br />
+
+        <button type="submit" class="btn btn-basic" @click="fetchRandomUser">New User</button>
+      </div><!-- end header-->
+    </div><!--end container-->
+
+
+    <!-- Moment.JS via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <!-- development version, includes helpful console war -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/aboutme.js"></script>
+  </body>
+  </html>
+  <!--End Header-->
