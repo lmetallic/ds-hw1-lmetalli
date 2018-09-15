@@ -11,8 +11,6 @@ var RandomUser = new Vue ({
           },
       },
 
-//anumalho@iu.edu
-
 methods: {
   prettyDate: function (d) {
     return moment(d).format('l')
@@ -30,7 +28,6 @@ methods: {
         RandomUser.person.gender=json.results[0].gender,
         RandomUser.person.origin=json.results[0].nat,
         RandomUser.person.dob=json.results[0].dob.date,
-
         RandomUser.person.img=json.results[0].picture.large,
         RandomUser.person.email=json.results[0].email
         } )
