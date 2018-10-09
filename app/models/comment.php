@@ -6,6 +6,11 @@ class Comment
 
 //just need id and comment
 
+  public funtion __construct($row){
+    $this->comment_id = isset($row['comment_id']) ? intval($row['comment_id']) : null;
+    $this->comment = isset $row['comment'];
+  }
+
   public function create() {
   $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
