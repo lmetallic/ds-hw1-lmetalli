@@ -2,9 +2,7 @@
 require '../../app/common.php';
 // 1. Go to the database and get all teams
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $comment = new Comment($_POST);
-  $comment->create();
-  echo json_encode($comment);
+  require 'commentPost.php';
   exit;
 }
 
