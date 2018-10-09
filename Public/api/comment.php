@@ -15,5 +15,3 @@ $json = json_encode($commentArr, JSON_PRETTY_PRINT);
 // 3. Print
 header('Content-Type: application/json');
 echo $json;
-
-//change work to comment
