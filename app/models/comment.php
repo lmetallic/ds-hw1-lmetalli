@@ -5,11 +5,15 @@ class Comment
   public $comment;
 
 //just need id and comment
+
   public function create() {
   $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+
   $sql = 'INSERT INTO Comment (comment_id, comment)
           VALUES (?,?)';
+
   $statement = $db->prepare($sql);
+
   $success = $statement->execute([
     $this->comment_id,
     $this->comment,
@@ -36,3 +40,4 @@ class Comment
     }
     return $arr;
   }
+}
