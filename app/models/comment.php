@@ -8,14 +8,14 @@ class Comment
 
   public function __construct($row){
     $this->comment_id = isset($row['comment_id']) ? intval($row['comment_id']) : null;
-    $this->comment = isset $row['comment'];
+    $this->comment = isset ($row['comment']);
   }
 
   public function create() {
   $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
-  $sql = 'INSERT INTO Comment (comment_id, comment)
-          VALUES (?,?)';
+  $sql = 'INSERT INTO Comment (comment)
+          VALUES (?)';
 
   $statement = $db->prepare($sql);
 
