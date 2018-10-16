@@ -5,8 +5,8 @@ var commentTable = new Vue({
       comment_id: 0,
       comment: '',
     },
-    commentArr: [],
     commentForm: { },   // populated by this.getEmptyCommentForm()
+    commentArr: [],
   },
 
   methods: {
@@ -39,18 +39,19 @@ var commentTable = new Vue({
         comment: null
       }
     },
-  },
 
-
-  created () {
-
+  fetchComments () {
     fetch('api/comment.php')
     .then( response => response.json() )
     .then( json => {commentTable.commentArr = json} )
     .catch( err => {
       console.error('COMMENT FETCH ERROR:');
       console.error(err);
-    })
+      })
+    }},
+
+  created () {
+    this.fetchComments();
     this.commentForm = this.getEmptyCommentForm();
   }
 });
