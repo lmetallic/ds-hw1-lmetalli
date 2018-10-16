@@ -20,11 +20,10 @@
       <thead>
         <tr>
           <th>ID</th>
-          <th>Comment</th>
+          <th>Comments</th>
         </tr>
       </thead>
-
-      <tbody id="commentTableBody" v-for="c in commentArr">
+      <tbody id="commentTableBody" v-for="c in commentArr" >
         <td>{{c.comment_id}}</td>
         <td>{{c.comment}}</td>
       </tbody>
@@ -32,7 +31,7 @@
 
     <hr>
     <h3>Add comment</h3>
-    
+
     <form id = "newCommentForm" @submit.prevent="handleCommentForm">
       <div class="form-group row">
         <div class="col-sm-3">
