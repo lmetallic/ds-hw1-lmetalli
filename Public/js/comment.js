@@ -1,7 +1,7 @@
-var comment = new Vue({
+var commentTable = new Vue({
   el: '#commentMain',
   data: {
-    task: {
+    Comment: {
       comment_id: 0,
       comment: '',
     },
@@ -11,17 +11,19 @@ var comment = new Vue({
 
   methods: {
     handleCommmentForm(e) {
-      const s = JSON.stringify(this.commentForm);
 
+      e.preventDefault();
+      const s = JSON.stringify(this.commentForm);
+      console.log("comment form");
       console.log(s);
 
       // POST to remote server
-      fetch('http://ec2-34-216-75-76.us-west-2.compute.amazonaws.com/api/comment.php', {
+      fetch('api/comment.php', {
         method: "POST",
         headers: {
             "Content-Type": "application/json; charset=utf-8"
         },
-        body: s // body data type must match "Content-Type" header
+        body: s
       })
       .then( response => response.json() )
       .then( json => {this.commentArr.push(json)})
@@ -38,14 +40,17 @@ var comment = new Vue({
       }
     },
   },
+
+
   created () {
 
-    fetch('http://ec2-34-216-75-76.us-west-2.compute.amazonaws.com/api/comment.php')
+    fetch('api/comment.php')
     .then( response => response.json() )
-    .then( json => {comment.commentArr = json} )
+    .then( json => {commentTable.commentArr = json} )
     .catch( err => {
       console.error('COMMENT FETCH ERROR:');
       console.error(err);
     })
+    this.commentForm = this.getEmptyCommentForm();
   }
-})
+});
